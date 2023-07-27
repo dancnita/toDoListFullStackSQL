@@ -1,0 +1,46 @@
+//Linux
+
+//client
+//npm create vite@latest
+
+//server
+//npm init //-y -> default values
+
+// install express
+npm i express
+
+//auto restarting the node application when file changes in the directory are detected ; dev dependency 
+npm install --save-dev nodemon
+//as dependency
+npm i -D nodemon
+
+// install mysql lib
+npm i mysql2
+
+//install dotenv lib
+npm i dotenv
+
+npm install body-parser
+
+//CORS in node. js stands for Cross-Origin Resource Sharing. It is a mechanism by which resources are shared across different servers. Single-origin policy is important for safety however, blocks external requests.
+npm install cors
+
+// run server - node
+node index.js
+
+// run server with nodemon -> package.json [script /nodemon index.js]
+npm run 'devStart'
+
+// start client + server(backend) at same time
+    // server ->  install concurrently(allows to start both your frontend and backend at the same time)
+    npm i -D concurrently
+
+    //client
+    npm init -y
+    package-json -> 
+    "scripts": {
+       "startServs": "concurrently \"cd backend && npm run startDev\" \"cd frontend && npm run dev\" "
+   }
+
+//windows shared terminal -> net start MySQL
+
